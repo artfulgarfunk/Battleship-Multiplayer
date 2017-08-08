@@ -2,12 +2,12 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from 'chai';
 
-import ShipBoard from '../src/components/shipBoard.jsx';
+import AttackBoard from '../src/components/attackBoard.jsx';
 import Cell from '../src/components/cell.jsx';
 
-describe('<ShipBoard />', () => {
+describe('<AttackBoard />', () => {
   it('contains 100 cells', () => {
-  const wrapper = shallow(<ShipBoard />);
+  const wrapper = shallow(<AttackBoard />);
   expect(wrapper.find(Cell)).to.have.length(100);
 });
 });
