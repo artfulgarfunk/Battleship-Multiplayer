@@ -7,7 +7,7 @@ import Cell from '../src/components/cell.jsx';
 
 describe('<AttackBoard />', () => {
   it('contains 100 cells', () => {
-  const wrapper = shallow(<AttackBoard />);
-  expect(wrapper.find(Cell)).to.have.length(100);
-});
+    const wrapper = shallow(<AttackBoard playermap={Array(100).fill(['~', ' '])} />);
+    expect(wrapper.find(Cell)).to.have.length(100);
+  });
 });
