@@ -202,9 +202,9 @@ export default class Game extends React.Component {
     return (
           <div>
             <Switch status={this.disPlayer()} onSwitchClick={() => this.switchPlayer()} message=''/>
-            <h2> Player 1 Map </h2>
+            <h2> Player 1 Ship Map </h2>
             <ShipBoard playermap={this.state.P1Map} onBoardClick={(i) => this.ownHandleClick(i)} />
-            <h2> Enemy Map (P2) </h2>
+            <h2> Player 2 Ship Map </h2>
             <ShipBoard playermap={this.state.P2Map} onBoardClick={(i) => this.ownHandleClick(i)}/>
             <h2> Player 1 Fleet </h2>
             <Fleet fleet={this.state.P1Fleet} onFleetClick={(ship) => this.handleFleetClick(ship)}/>
@@ -212,9 +212,9 @@ export default class Game extends React.Component {
             <h2> Player 2 Fleet </h2>
             <Fleet fleet={this.state.P2Fleet} onFleetClick={(ship) => this.handleFleetClick(ship)}/>
             <Switch status={this.displayOrientation()} onSwitchClick={() => this.changeHorizontal()} message='Orientation: '/>
-            <h2> Player 2 Map </h2>
+            <h2> Player 1 Hit Map </h2>
             <AttackBoard playermap={this.state.P2Map} onBoardClick={(i) => this.handleClick(i)}/>
-            <h2> Enemy Map (P1) </h2>
+            <h2> Player 2 Hit Map </h2>
             <AttackBoard playermap={this.state.P1Map} onBoardClick={(i) => this.handleClick(i)}/>
           </div>
     );
